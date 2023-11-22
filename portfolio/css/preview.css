@@ -1,0 +1,160 @@
+/* font type */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: initial;
+  display: block;
+}
+a:hover {
+  cursor: default;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  color: var(--colo-white);  
+} 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} li {
+  margin: 0;
+  padding: 0; 
+}
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+/* start container */
+.ctn {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+} 
+/*s end container */
+
+/* start media query  */
+/* Small */
+@media (min-width: 768px) {
+  .ctn {
+      width: 750px;
+      /* background-color: burlywood; */
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .ctn {
+      width: 970px;
+      /* background-color: brown; */
+  }
+}
+  /* Large */
+@media (min-width: 1200px) {
+  .ctn {
+      width: 1170px;
+      /* background-color: blue; */
+  }
+}
+/* end media query */
+
+
+
+/* header */
+.header_page {
+  background-color: #1d293e;
+}
+.header_page .ctn {
+  padding: 80px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.header_page .ctn h1 {
+  color: #f0bb62;
+  font-size: 55px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.header_page .ctn h2 {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* header */
+
+
+
+/* demo */
+.demo {
+  padding: 60px 0px;
+}
+.demo .ctn {
+  padding: 20px 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  column-gap: 40px;
+}
+.demo .ctn .single_demo a {
+  transition: 0.4s all;
+}
+.demo .ctn .single_demo a img {
+  display: block;
+  width: 100%;
+  box-shadow: 0 8px 40px rgba(0,0,0, 0.1);
+}
+.demo .ctn .single_demo a:hover {
+  opacity: 0.7;
+  transform: translateY(-10px);
+}
+.demo .ctn .single_demo .demo_content a h4 {
+  color: #222;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 40px 0 0;
+  text-align: center;
+}
+.demo .ctn .single_demo .demo_content a:hover h4 {
+  color: #f0bb62;
+  text-decoration: underline;
+  transition: 0.1s all;
+}
+/* demo */
+
+
+
+/* footer */
+.footer_page {
+  background-color: #141414;
+  padding: 40px 0px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer_page p {
+  color: #fff;
+  text-align: center;
+}
+/* footer */
