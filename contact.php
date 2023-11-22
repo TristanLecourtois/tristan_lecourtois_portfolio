@@ -8,15 +8,15 @@
 		$subject = $_POST['subject']; 
 		
 		$body = "From: $name\n E-Mail: $email\n Subject: $subject\n Message:\n $message";
-	
+		if (mail($to, $subject, $body, $from)) {
+			header("Location: thank-you.html");
+			exit();
+		} else {
+			echo "Error: Unable to send email.";
+		}
 
 	mail($to, $subject, $body, $from) or die("Error!");
-	if (mail($to, $subject, $body, $from)) {
-        header("Location: thank-you.html");
-        exit();
-    } else {
-        echo "Error: Unable to send email.";
-    }
+	
 	header("location: thank-you.html");
 	
 	}
