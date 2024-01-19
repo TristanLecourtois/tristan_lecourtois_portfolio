@@ -861,26 +861,22 @@ a:hover{
 -----------------------------------------------------------------*/
 .single_blog{
 	margin-bottom: 30px;
+  
     overflow-x: hidden;
+ 
 }
-.single_blog:hover img{
-	-moz-transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    transform: scale(1.09);
-}
+
 .single_blog .blog-image{
 	overflow: hidden;
     position: relative;
     top:40px;
-    left:220px
+    left:220px;
 
 }
 .single_blog img{
 	width: 20%;
-    border-radius: 3px 3px 0 0;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.5s;
+    border-radius: 0px 0px 0 0;
+
     
 }
 
@@ -893,6 +889,8 @@ a:hover{
 	border-radius: 3px;
 	text-align: left;
 	margin-bottom: 30px;
+   
+
     
 }
 .dark_bg .blog-thumb{
