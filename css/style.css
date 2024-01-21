@@ -730,6 +730,40 @@ a:hover{
     z-index: 2;
 
 }
+
+ .project-details h4 {
+    position: absolute;
+    text-align: left;
+    top: 5%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+
+}
+
+.project-details p {
+    color: #fff;
+    position: absolute;
+    left:4%;
+}
+
+.img-container-github img {
+    position: absolute;
+    width: 40px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    bottom: 15px; /* Adjust the bottom position as needed */
+    right: 15px; 
+    filter: brightness(0) invert(1);
+}
+
+.work_content_area .item-img:hover .item-img-overlay .project-details {
+    opacity: 1;
+}
+
+
+
+/* Adjust the styling as needed */
+
 /* ----------------------------------------------------------------
     [ End Works ]
 -----------------------------------------------------------------*/
