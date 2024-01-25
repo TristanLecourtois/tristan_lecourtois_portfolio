@@ -734,6 +734,7 @@ a:hover{
  .project-details h4 {
     position: absolute;
     text-align: left;
+    margin-left: 15px;
     top: 5%;
     left: 30%;
     transform: translate(-50%, -50%);
