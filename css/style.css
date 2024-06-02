@@ -644,123 +644,151 @@ a:hover{
     [ 08 Start Works ]
 -----------------------------------------------------------------*/
 
-
-.work_filter ul{
-	padding: 0;
-	list-style: none;
-	margin-bottom: 30px;
+/* General Styles */
+.work_filter ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 30px;
 }
-.work_filter ul li{
+
+.work_filter ul li {
     font-weight: 600;
     text-transform: capitalize;
     display: inline-block;
     cursor: pointer;
     font-size: 15px;
     padding: 7px 25px;
-	border: 1px solid #ccc;
-	color: #333333;
+    border: 1px solid #ccc;
+    color: #333333;
     letter-spacing: 1px;
-	border-radius: 30px;
+    border-radius: 30px;
     margin: 0 5px 20px;
     transition: all 0.5s ease-in-out;
 }
-.dark_bg .work_filter ul li{
-	border: 1px solid #020335;
-	color: #fff;
+
+.dark_bg .work_filter ul li {
+    border: 1px solid #020335;
+    color: #fff;
 }
-.work_filter ul li:hover{
-	border: 1px solid #020335;
-	background: #020335;
-	color: #fff;
+
+.work_filter ul li:hover {
+    border: 1px solid #020335;
+    background: #020335;
+    color: #fff;
 }
+
 .work_filter .active {
     color: #fff;
-	border-color: #020335;
+    border-color: #020335;
     background: #020335;
 }
-.work_content_area .item-img{
-	position: relative;
-	margin-bottom: 30px;
-	-webkit-transition: all .4s;
-	transition: all .4s;
+
+/* Work Content Area */
+.work_content_area .item-img {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto 30px;
+    border: 2px solid #020335;
+    transition: all .4s;
+    box-sizing: border-box;
 }
-.item-img:hover{
-	
+
+.work_content_area .item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.work_content_area .item-img:hover{
-	-webkit-box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
-	box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
-}
-.work_content_area .item-img:hover .item-img-overlay{
-	visibility: visible;
-	opacity: 1;
-}
-.overlay-info{
-	margin-top: 50px;
-}
-.work_content_area .item-img-overlay{
-	position: absolute;
+
+.work_content_area .item-img-overlay {
+    position: absolute;
     background: rgba(7, 1, 90, 0.6);
     height: 100%;
     width: 100%;
-    opacity: 0;
     top: 0;
     left: 0;
-    transition: opacity .3s ease-in-out;
-    z-index: 1;
-    overflow: hidden;
-}
-.work_content_area .item-img-overlay .icon{
-	position: absolute;
-	right: 155px;
-	bottom: 110px;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	font-size: 25px;
-	color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-
-.certif {
-    position: relative;
-    top: 0px;
-    left:0px;
-    z-index: 2;
-
-}
-
- .project-details h4 {
-    position: absolute;
-    text-align: left;
-    margin-left: 15px;
-    top: 5%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-
-}
-
-.project-details p {
-    color: #fff;
-    position: absolute;
-    left:4%;
-}
-
-.img-container-github img {
-    position: absolute;
-    width: 40px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    bottom: 15px; /* Adjust the bottom position as needed */
-    right: 15px; 
-    filter: brightness(0) invert(1);
-}
-
-.work_content_area .item-img:hover .item-img-overlay .project-details {
+.work_content_area .item-img:hover .item-img-overlay {
+    visibility: visible;
     opacity: 1;
 }
 
+.project-details {
+    color: #fff;
+}
+
+.project-details h4 {
+    margin: 0;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.img-container-github {
+    margin-top: 15px;
+}
+
+.img-container-github img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+/* Specific Styles for Portfolio Titles */
+.arlo_tm_portfolio_titles {
+    white-space: nowrap;
+    background: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 15px;
+    color: #000000;
+    position: fixed;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.arlo_tm_portfolio_titles.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.arlo_tm_portfolio_titles .work__cat {
+    position: absolute;
+    background: #ffffff;
+    top: 100%;
+    left: 0;
+    margin-top: -5px;
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 15px;
+}
+
+.entry {
+    position: relative;
+}
+
+.arlo_tm_portfolio_image_main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 
 /* Adjust the styling as needed */
