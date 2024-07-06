@@ -1133,12 +1133,44 @@ a:hover{
 }
 
 .project-card {
+    position: relative;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 15px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.project-card::before,
+.project-card::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.project-card::before {
+    background-color: #ffeb3b; /* Jaune */
+    transform: translate(10px, 10px); /* Translation initiale */
+}
+
+.project-card::after {
+    background-color: #2196f3; /* Bleu */
+    transform: translate(20px, 20px); /* Translation initiale */
+}
+
+.project-card:hover::before {
+    transform: translate(0, 0); /* Translation sur hover */
+}
+
+.project-card:hover::after {
+    transform: translate(10px, 10px); /* Translation sur hover */
 }
 
 .project-card .header {
@@ -1172,7 +1204,6 @@ a:hover{
     font-weight: normal;
 }
 
-
 .project-name {
     font-weight: bold;
 }
@@ -1202,6 +1233,9 @@ a:hover{
     height: 20px;
     width: 20px;
 }
+
+
+
 
 /* ----------------------------------------------------------------
     [ End Top-control ]
